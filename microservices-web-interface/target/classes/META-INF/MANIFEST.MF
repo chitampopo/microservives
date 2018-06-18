@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Tam
+Build-Jdk: 10.0.1
+Implementation-Title: microservices-web-interface
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.innovation.microservices
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/microservices-web-interface
+Created-By: Maven Integration for Eclipse
+
