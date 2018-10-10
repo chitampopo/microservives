@@ -42,6 +42,16 @@ public class UserController {
 	public List<User> getAll() {
 		return userRepository.findAll();
 	}
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/{id}")
+	public User getUserInformation(@PathVariable(name = "id") int id) {
+		for(User user : userRepository.findAll()) {
+			if(user.getUserId() == id) {
+				return user;
+			}
+		}
+		return null;
+	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/login/{email}/{password}")
 	public String checkExistedUser(@PathVariable(name = "email") String email,

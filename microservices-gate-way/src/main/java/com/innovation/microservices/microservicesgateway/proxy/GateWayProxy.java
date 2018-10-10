@@ -12,4 +12,10 @@ public interface GateWayProxy {
 
 	@GetMapping("/users/login/{email}/{password}")
 	public ResponseEntity<String> callLogin(@PathVariable("email") String email, @PathVariable("password") String password);
+	
+	@GetMapping("/users")
+	public ResponseEntity<String> getAll();
+	
+	@GetMapping("/users/{id}")
+	public ResponseEntity<String> getUserInformation(@PathVariable(name = "id") int id);
 }
