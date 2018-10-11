@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RibbonClient(name="SALARY-SERVICE")
 public interface SalaryProxy {
 
-	@GetMapping("/web")
-	public ResponseEntity<String> getSalary();
+	@GetMapping("/salary-service/web")
+	public ResponseEntity<String> getSalary(@RequestParam(name = "staffCode") String staffCode);
 }

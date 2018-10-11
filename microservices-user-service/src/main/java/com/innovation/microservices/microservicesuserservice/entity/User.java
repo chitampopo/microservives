@@ -11,6 +11,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userId;
 	private String userName;
+	private String staffCode;
 	private String email;
 	private String password;
 	
@@ -18,11 +19,12 @@ public class User {
 		super();
 	}
 
-	public User(String userName, String email, String password) {
+	public User(String userName, String email, String password, String staffCode) {
 		super();
 		this.userName = userName;
 		this.email = email;
 		this.password = password;
+		this.staffCode = staffCode;
 	}
 
 	public int getUserId() {
@@ -56,4 +58,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+
+	public String getStaffCode() {
+		return staffCode;
+	}
+
+	public void setStaffCode(String staffCode) {
+		this.staffCode = staffCode;
+	}
+	
+	
 }

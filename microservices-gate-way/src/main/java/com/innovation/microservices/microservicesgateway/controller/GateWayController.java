@@ -35,8 +35,8 @@ public class GateWayController {
 		return gateWayProxy.getUserInformation(id);
 	}
 	
-	@RequestMapping(method = RequestMethod.GET, value = "/users/{id}/salary")
-	public ResponseEntity<String> getSalary(@PathVariable(name = "id") int id) {
-		return salaryProxy.getSalary();
+	@RequestMapping(method = RequestMethod.GET, value = "/users/{staffCode}/salary")
+	public ResponseEntity<String> getSalary(@PathVariable(name = "staffCode") String staffCode) {
+		return salaryProxy.getSalary(staffCode);
 	}
 }

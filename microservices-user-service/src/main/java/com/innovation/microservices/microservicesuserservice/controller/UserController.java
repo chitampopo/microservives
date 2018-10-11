@@ -25,10 +25,10 @@ public class UserController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "/save")
 	public String process() {
-		userRepository.save(new User("user1", "user1@gmail.com", "user@user1"));
-		userRepository.save(new User("user2", "user2@gmail.com", "user@user2"));
-		userRepository.save(new User("user3", "user3@gmail.com", "user@user3"));
-		userRepository.save(new User("user4", "user4@gmail.com", "user@user4"));
+		userRepository.save(new User("user1", "user1@gmail.com", "user@user1", "NV001"));
+		userRepository.save(new User("user2", "user2@gmail.com", "user@user2", "NV002"));
+		userRepository.save(new User("user3", "user3@gmail.com", "user@user3", "NV003"));
+		userRepository.save(new User("user4", "user4@gmail.com", "user@user4", "NV004"));
 		userRepository.flush();
 		return "Done";
 	}
